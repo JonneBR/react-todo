@@ -18,10 +18,11 @@ body {
 
 header {
   font-size: 1.4rem;
+  /* border: 1px solid black; */
 }
 
+form,
 header {
-  border: 1px solid red;
   min-height: 20vh;
   display: flex;
   justify-content: center;
