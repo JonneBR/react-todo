@@ -18,7 +18,6 @@ body {
 
 header {
   font-size: 1.4rem;
-  /* border: 1px solid black; */
 }
 
 form,
@@ -28,9 +27,15 @@ header {
   justify-content: center;
   align-items: center;
 }
+.select {
+  position: absolute;
+  text-align: center;
+  margin-top: 6rem;
+  width: 100%;
+}
+
 form input,
 form button {
-  /* border: 1px solid red; */
   padding: 0.5rem;
   font-size: 1.5rem;
   border: none;
@@ -54,7 +59,7 @@ h1 {
 }
 
 /* Custom Select */
-/* select {
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -63,4 +68,24 @@ h1 {
   box-shadow: none;
   border: 0 !important;
   background-image: none;
-} */
+  cursor: pointer;
+}
+
+select {
+  width: 8.6rem;
+}
+
+.select::after {
+  content: '\25BC';
+  padding: 0.4rem;
+  background: #284866;
+  position: absolute;
+  margin-right: 12px;
+  width: 1rem;
+  margin-left: -28px;
+  pointer-events: none;
+  cursor: pointer;
+}
+.filter-todo {
+  padding: 0.4rem;
+}
