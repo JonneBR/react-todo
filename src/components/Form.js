@@ -3,8 +3,8 @@ import React from 'react'
 const Form = () => {
   return (
     <form>
-      <input type="text" className="todo-input" />
-      <button className="todo-button" type="submit">
+      <input type="text" className="form-input" />
+      <button className="form-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
       <div className="select">

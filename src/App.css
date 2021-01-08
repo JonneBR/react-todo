@@ -28,7 +28,39 @@ header {
   justify-content: center;
   align-items: center;
 }
+form input,
+form button {
+  /* border: 1px solid red; */
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: white;
+  background: #284866;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #ff6f47;
+  color: white;
+}
 
 h1 {
   color: var(--primary-text);
 }
+
+/* Custom Select */
+/* select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+} */
