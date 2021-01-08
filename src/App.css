@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: linear-gradient(to top, #09203f 0%, #537895 100%);
+  --primary-text: #e2f3f5;
+}
+
+body {
+  background-image: var(--background-color);
+  min-height: 100vh;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  font-size: 1.4rem;
+}
+
+header {
+  border: 1px solid red;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--primary-text);
+}
