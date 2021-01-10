@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const Form = ({ setInputText }) => {
+const Form = ({ todos, setTodos, inputText, setInputText }) => {
   const inputTextHandler = (e) => {
     console.log(e.target.value);
     setInputText(e.target.value);
@@ -8,11 +8,25 @@ const Form = ({ setInputText }) => {
 
   const submitTodoHandler = (e) => {
     e.preventDefault();
+    setTodos([
+      ...todos,
+      {
+        text: inputText,
+        completed: false,
+        id: Math.random() * 1000,
+      },
+    ]);
+    setInputText('');
   };
   return (
     <Fragment>
       <form>
-        <input onChange={inputTextHandler} type="text" className="form-input" />
+        <input
+          value={inputText}
+          onChange={inputTextHandler}
+          type="text"
+          className="form-input"
+        />
         <button
           onClick={submitTodoHandler}
           className="form-button"
