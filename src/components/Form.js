@@ -5,11 +5,19 @@ const Form = ({ setInputText }) => {
     console.log(e.target.value);
     setInputText(e.target.value);
   };
+
+  const submitTodoHandler = (e) => {
+    e.preventDefault();
+  };
   return (
     <Fragment>
       <form>
         <input onChange={inputTextHandler} type="text" className="form-input" />
-        <button className="form-button" type="submit">
+        <button
+          onClick={submitTodoHandler}
+          className="form-button"
+          type="submit"
+        >
           <i className="fas fa-plus-square"></i>
         </button>
         <div className="select">
