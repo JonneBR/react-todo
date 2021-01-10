@@ -1,14 +1,14 @@
 import React from 'react';
+import Todo from './Todo';
 
-const TodoList = () => {
+const TodoList = ({ todoList }) => {
+  const createNewLi = () => {
+    console.log('Success');
+  };
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        <li>Hello World</li>
-        <li>Hello World</li>
-        <li>Hello World</li>
-        <li>Hello World</li>
-        <li>Hello World</li>
+        <Todo />
       </ul>
     </div>
   );
