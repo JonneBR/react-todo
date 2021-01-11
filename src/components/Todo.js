@@ -1,13 +1,9 @@
 import React from 'react';
 
-const Todo = ({ text, setTodo, items }) => {
-  const removeItem = (e) => {
-    const divElement = e.target.parentElement;
-    setTodo(items.filter((item) => item.text !== divElement.innerText));
-    // console.log('setTODO', item);
-    console.log('setTODO', divElement.innerText);
-    // console.log(divElement);
-    // console.log('DEPOIS', teste);
+const Todo = ({ text, todo, items, setTodos }) => {
+  //Fix empty string bug
+  const removeItem = () => {
+    setTodos(items.filter((item) => item.id !== todo.id));
   };
 
   return (
