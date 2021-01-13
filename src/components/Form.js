@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 
-const Form = ({ todos, setTodos, inputText, setInputText }) => {
+const Form = ({ todos, setTodos, inputText, setInputText, setStatus }) => {
   const inputTextHandler = (e) => {
-    console.log(e.target.value);
     setInputText(e.target.value);
   };
 
@@ -20,7 +19,7 @@ const Form = ({ todos, setTodos, inputText, setInputText }) => {
   };
 
   const statusHandler = (e) => {
-    console.log(e.target.value);
+    setStatus(e.target.value);
   };
   return (
     <Fragment>
