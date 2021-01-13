@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Todo = ({ text, todo, items, setTodos }) => {
-  //Fix empty string bug
   const removeItem = () => {
     setTodos(items.filter((item) => item.id !== todo.id));
   };

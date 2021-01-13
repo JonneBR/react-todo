@@ -1,6 +1,13 @@
 import React, { Fragment } from 'react';
 
-const Form = ({ todos, setTodos, inputText, setInputText, setStatus }) => {
+const Form = ({
+  todos,
+  setTodos,
+  inputText,
+  setInputText,
+  setStatus,
+  filteredTodos,
+}) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
