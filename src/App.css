@@ -131,9 +131,9 @@ select {
   background: rgba(180, 255, 105, 0.973);
 }
 
-.todo-item {
+/* .todo-item {
   padding: 0rem 0.5rem;
-}
+} */
 
 .completed {
   text-decoration: line-through;
