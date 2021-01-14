@@ -50,7 +50,6 @@ function App() {
   // const saveLocalStorage = () => {
   //   localStorage.setItem('todos', JSON.stringify(todos));
   // };
-  // Save to Local
 
   const getLocalTodos = () => {
     if (localStorage.getItem('todos') === null) {
