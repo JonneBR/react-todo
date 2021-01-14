@@ -16,12 +16,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    filterHandler();
-    saveLocalStorage();
-  }, [todos, status]);
-
-  //Functions
-  const filterHandler = () => {
     switch (status) {
       case 'completed':
         setFilteredTodos(todos.filter((todo) => todo.completed !== false));
@@ -33,11 +27,31 @@ function App() {
         setFilteredTodos(todos);
         break;
     }
-  };
-  // Save to Local
-  const saveLocalStorage = () => {
+
     localStorage.setItem('todos', JSON.stringify(todos));
-  };
+  }, [todos, status]);
+
+  //Functions are above, not being used here in order to avoid warnings
+
+  // const filterHandler = () => {
+  //   switch (status) {
+  //     case 'completed':
+  //       setFilteredTodos(todos.filter((todo) => todo.completed !== false));
+  //       break;
+  //     case 'uncompleted':
+  //       setFilteredTodos(todos.filter((todo) => todo.completed !== true));
+  //       break;
+  //     default:
+  //       setFilteredTodos(todos);
+  //       break;
+  //   }
+  // };
+
+  // const saveLocalStorage = () => {
+  //   localStorage.setItem('todos', JSON.stringify(todos));
+  // };
+  // Save to Local
+
   const getLocalTodos = () => {
     if (localStorage.getItem('todos') === null) {
       localStorage.setItem('todos', JSON.stringify([]));
